@@ -1,33 +1,33 @@
 ﻿<?xml version="1.0"?>
-<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
-  DTS:refId="Package"
-  DTS:CreationDate="8/20/2017 9:08:30 AM"
-  DTS:CreationName="Microsoft.Package"
-  DTS:CreatorComputerName="warehouse"
-  DTS:CreatorName="warehouse\warehouse"
-  DTS:DTSID="{E7E428B9-CE5A-4646-B802-D7067FA412DA}"
-  DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="14.0.0800.90"
+<DTS:Executable
+  DTS:refId="Package" xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ExecutableType="SSIS.Package.3"
+  DTS:CreatorName="WAREHOUSEDEV\warehouse"
+  DTS:CreatorComputerName="WAREHOUSEDEV"
+  DTS:CreationDate="9/7/2017 10:34:42 PM"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{7E54975E-30A3-40D1-9BCE-67EEEE2408F0}"
+  DTS:LastModifiedProductVersion="11.0.2100.60"
   DTS:LocaleID="1033"
   DTS:ObjectName="CopyParsedDataByHour"
-  DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{54D3C3C2-E896-4F12-AA88-0DE8C28B6CA0}">
+  DTS:DTSID="{870C2074-CF45-4917-98F8-345E03854869}"
+  DTS:CreationName="SSIS.Package.3">
   <DTS:Property
-    DTS:Name="PackageFormatVersion">8</DTS:Property>
+    DTS:Name="PackageFormatVersion">6</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[rentpathdna.database.windows.net.StageDB.warehouse]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{650B30AB-3072-4956-AAE1-5CC4B7971A70}"
-      DTS:ObjectName="rentpathdna.database.windows.net.StageDB.warehouse">
+      DTS:refId="Package.ConnectionManagers[rentpathdna.database.windows.net.RentPath.extralarge]"
+      DTS:ObjectName="rentpathdna.database.windows.net.RentPath.extralarge"
+      DTS:DTSID="{FB65FE58-AF5A-4B7B-9886-CD25CAE62835}"
+      DTS:CreationName="OLEDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=rentpathdna.database.windows.net;User ID=warehouse;Initial Catalog=StageDB;Provider=SQLNCLI11.1;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=rentpathdna.database.windows.net;User ID=extralarge;Initial Catalog=RentPath;Provider=SQLNCLI11.1;Auto Translate=False;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxALLOjinO0q6Odl1ocigsgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAKMHf9/aW0dL6jioOjWAC0u9C+LmqEmhe5WFDOfe3VcgAAAAAOgAAAAAIAACAAAADkUH2vA+KcQnLDEHFSKxcgkYM8BF6g8zws1NPwnVq8XyAAAAAa68rqct1dL/wiGp7mu7KPnEB2NA4vAXgzX/lMjfabsEAAAAA4V+7gGdZfChRWw8XlYLGN87sm+ZJcoZUBaUacbrfWSfY8FY6piyAiGefwLC9fMj5wGv829rDAOPFvOa217zYz</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACb6c8Qk/OU6nywVV/dbn7gAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABQU0CD1nx1hFNiaD0/icK5VrsVjfFTb9Q43o+s4z7tRgAAAAAOgAAAAAIAACAAAACI7VoS8CuHKoyVMOEpCCGUgN/KvlVt7D+fIms42+LyliAAAACueKexaB/ssgOyQ+jWMJtVygw2rQoY+Do9sP0kvAg3pEAAAADvmGCNtULJt9oPwzeUUomuLV6XaC32lnvO5yHPtqOLqDoxgaNnfwG33LDDPOitEb92Ufk+aAFQInR2tGBUqejj</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -35,19 +35,20 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\pr_copyparsedatabyhour"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{9D97BAEE-2FA4-4168-91F7-219BC6753427}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:refId="Package\Copy ParsedDataByHour to ParsedData"
+      DTS:ExecutableType="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
+      DTS:ThreadHint="0"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2012; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:LocaleID="-1"
-      DTS:ObjectName="pr_copyparsedatabyhour"
-      DTS:ThreadHint="0">
+      DTS:ObjectName="Copy ParsedDataByHour to ParsedData"
+      DTS:DTSID="{4B656721-26A6-445A-99A2-D797731F3873}"
+      DTS:Description="Execute SQL Task"
+      DTS:CreationName="Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask, Microsoft.SqlServer.SQLTask, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{650B30AB-3072-4956-AAE1-5CC4B7971A70}"
-          SQLTask:SqlStatementSource="exec dbo.[pr_CopyParseDataByHourToParsedData]  null" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:Connection="{FB65FE58-AF5A-4B7B-9886-CD25CAE62835}"
+          SQLTask:SqlStatementSource="exec dbo.[pr_CopyParseDataByHourToParsedData]  @ymdid=null" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -56,7 +57,7 @@
 <!--If you manually edit this section and make a mistake, you can delete it. -->
 <!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
-  Version="8">
+  Version="sql11">
   <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
@@ -64,9 +65,9 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="196,42"
-          Id="Package\pr_copyparsedatabyhour"
-          TopLeft="240,134" />
+          Size="264,42"
+          Id="Package\Copy ParsedDataByHour to ParsedData"
+          TopLeft="130,63" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
